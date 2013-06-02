@@ -1,0 +1,2783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LULCModel</class>
+ <widget class="QMainWindow" name="LULCModel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>794</width>
+    <height>639</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="DataPreparation">
+         <attribute name="title">
+          <string>Data Preparation</string>
+         </attribute>
+         <widget class="QWidget" name="gridLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>29459</width>
+            <height>551</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="3" column="2">
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="title">
+              <string>Output Section</string>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_5">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>20</y>
+                <width>781</width>
+                <height>241</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_10">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>  Output File: </string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="leOutputFile">
+                 <property name="text">
+                  <string>/home/akjha/ouput/predict2005.img</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="pbSelectFile_OutputFile">
+                 <property name="text">
+                  <string>Select File</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QPushButton" name="pbNextDataPreparation">
+                 <property name="text">
+                  <string>Next</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>Input Section</string>
+             </property>
+             <widget class="QWidget" name="layoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>30</y>
+                <width>781</width>
+                <height>241</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="2" column="3">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Year:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="5">
+                <widget class="QCheckBox" name="cbCreateGrid_TO">
+                 <property name="text">
+                  <string>Create Grid</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="6">
+                <widget class="QPushButton" name="pbConvert_T0">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Convert</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="3">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Year:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="6">
+                <widget class="QPushButton" name="pbConvert_T1">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Convert</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="5">
+                <widget class="QCheckBox" name="cbCreateGrid_T1">
+                 <property name="text">
+                  <string>Create Grid</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>T0 File: </string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QPushButton" name="pbSelectFile_T0">
+                 <property name="text">
+                  <string>Select File</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <widget class="QPushButton" name="pbSelectFile_T1">
+                 <property name="text">
+                  <string>Select File</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string> Project Directory: </string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QPushButton" name="pbSelectDirectory">
+                 <property name="text">
+                  <string>Select Directory</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>T1 File: </string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Mask File: </string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QPushButton" name="pbSelectFile_Mask">
+                 <property name="text">
+                  <string>Mask File</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="leT0File">
+                 <property name="text">
+                  <string>/home/akjha/data/1985.img</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="leT1File">
+                 <property name="text">
+                  <string>/home/akjha/data/1995.img</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="leMaskFile">
+                 <property name="text">
+                  <string>/home/akjha/data/mask.img</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="4">
+                <widget class="QLineEdit" name="leYear_TO">
+                 <property name="text">
+                  <string>1985</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="4">
+                <widget class="QLineEdit" name="leYear_T1">
+                 <property name="text">
+                  <string>1995</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="5">
+                <widget class="QCheckBox" name="cbCreateGrid_Mask">
+                 <property name="text">
+                  <string>Create Grid</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="6">
+                <widget class="QPushButton" name="pbConvert_Mask">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Convert</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="leProjectDirectory">
+                 <property name="text">
+                  <string>/home/akjha/Lulc</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Gridsize: </string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSpinBox" name="sbGridsize">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimum">
+                  <number>50</number>
+                 </property>
+                 <property name="maximum">
+                  <number>250000</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>50</number>
+                 </property>
+                 <property name="value">
+                  <number>1000</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="4">
+                <widget class="QLineEdit" name="lineEdit">
+                 <property name="text">
+                  <string>128</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>NA Value</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="DriverSelectionT0">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="title">
+          <string>Driver Selection T0</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>771</width>
+            <height>261</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>4</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Select Drivers</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="pushButton_16">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="text">
+                  <string>Add Driver </string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="pushButton_6">
+                   <property name="text">
+                    <string>Next</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QTableWidget" name="tableWidget">
+                   <property name="sortingEnabled">
+                    <bool>false</bool>
+                   </property>
+                   <row>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </row>
+                   <row>
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                   </row>
+                   <row>
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                   </row>
+                   <row>
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                   </row>
+                   <column>
+                    <property name="text">
+                     <string>Driver Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>File Location</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </column>
+                   <item row="0" column="0">
+                    <property name="text">
+                     <string>slope</string>
+                    </property>
+                   </item>
+                   <item row="0" column="1">
+                    <property name="text">
+                     <string>/home/akjha/drivers/slope.img</string>
+                    </property>
+                    <property name="flags">
+                     <set>NoItemFlags</set>
+                    </property>
+                   </item>
+                   <item row="0" column="2">
+                    <property name="text">
+                     <string>Select File</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="0" column="3">
+                    <property name="text">
+                     <string>Select Model</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="1" column="0">
+                    <property name="text">
+                     <string>elevation</string>
+                    </property>
+                   </item>
+                   <item row="1" column="1">
+                    <property name="text">
+                     <string>/home/akjha/drivers/elevation.img</string>
+                    </property>
+                    <property name="flags">
+                     <set>NoItemFlags</set>
+                    </property>
+                   </item>
+                   <item row="1" column="2">
+                    <property name="text">
+                     <string>Select File</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="1" column="3">
+                    <property name="text">
+                     <string>Select Model</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="2" column="0">
+                    <property name="text">
+                     <string>distourban</string>
+                    </property>
+                   </item>
+                   <item row="2" column="1">
+                    <property name="text">
+                     <string>/home/akjha/drivers/slope.img</string>
+                    </property>
+                    <property name="flags">
+                     <set>NoItemFlags</set>
+                    </property>
+                   </item>
+                   <item row="2" column="2">
+                    <property name="text">
+                     <string>Select File</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="2" column="3">
+                    <property name="text">
+                     <string>Select Model</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="3" column="0">
+                    <property name="text">
+                     <string>distostream</string>
+                    </property>
+                   </item>
+                   <item row="3" column="1">
+                    <property name="text">
+                     <string>/home/akjha/drivers/slope.img</string>
+                    </property>
+                    <property name="flags">
+                     <set>NoItemFlags</set>
+                    </property>
+                   </item>
+                   <item row="3" column="2">
+                    <property name="text">
+                     <string>Select File</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                   <item row="3" column="3">
+                    <property name="text">
+                     <string>Select Model</string>
+                    </property>
+                    <property name="flags">
+                     <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="verticalLayoutWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>260</y>
+            <width>771</width>
+            <height>281</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="title">
+              <string>Do Model Fitting</string>
+             </property>
+             <widget class="QWidget" name="gridLayoutWidget_4">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>741</width>
+                <height>251</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_9">
+               <item row="1" column="1">
+                <widget class="QPushButton" name="pushButton_17">
+                 <property name="text">
+                  <string>Execute</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QPushButton" name="pushButton_19">
+                 <property name="text">
+                  <string>Next</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="2" column="0" rowspan="2">
+                <widget class="QGroupBox" name="groupBox_3">
+                 <property name="title">
+                  <string>Model ParaMeter Output</string>
+                 </property>
+                 <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>3</x>
+                    <y>20</y>
+                    <width>641</width>
+                    <height>161</height>
+                   </rect>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="verticalScrollBarPolicy">
+                   <enum>Qt::ScrollBarAlwaysOn</enum>
+                  </property>
+                  <property name="lineWrapMode">
+                   <enum>QPlainTextEdit::WidgetWidth</enum>
+                  </property>
+                  <property name="plainText">
+                   <string>$BU
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distourban  disttostream  
+    -0.57087      -4.89053       0.05153     -17.37234      -1.70906  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    10680 
+Residual Deviance: 7545 	AIC: 7555 
+
+$DBF
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+       7.987       -34.403       -21.125        -2.261         6.107  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    80660 
+Residual Deviance: 46930 	AIC: 46940 
+
+$class_2
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+   -12.20462      21.68842      27.38513       0.38717      -0.06995  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    57860 
+Residual Deviance: 21460 	AIC: 21470 
+
+$class_3
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+     -4.3284      -14.1903        5.2027       -0.7028       -3.8388  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    13500 
+Residual Deviance: 12930 	AIC: 12940 
+
+$class_4
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+      -49.82        -61.62        -38.16         59.76         26.86  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    103.9 
+Residual Deviance: 50.08 	AIC: 60.08 
+
+$class_5
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+      -8.341       -21.818        12.360        -6.098        -5.947  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    892.6 
+Residual Deviance: 792.2 	AIC: 802.2 
+
+$class_6
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+     -3.8802       -6.2561        0.8099        2.2640        0.9813  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    28320 
+Residual Deviance: 27090 	AIC: 27100 
+
+$class_7
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+      0.2006        5.8160      -13.2106        2.0149       -7.7734  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    13850 
+Residual Deviance: 11840 	AIC: 11850 
+
+$class_8
+
+Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
+
+Coefficients:
+ (Intercept)         slope     elevation      distoueb  disttostream  
+      1.9138       -4.2583       -0.7237        0.6141     -206.6887  
+
+Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
+Null Deviance:	    35680 
+Residual Deviance: 8416 	AIC: 8426 
+</string>
+                  </property>
+                 </widget>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_8">
+                 <item row="1" column="3">
+                  <widget class="QRadioButton" name="radioButton_3">
+                   <property name="text">
+                    <string>MLP</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QRadioButton" name="radioButton_2">
+                   <property name="text">
+                    <string>Individualy Selected</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QRadioButton" name="radioButton">
+                   <property name="text">
+                    <string>Logistic Regression</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QRadioButton" name="radioButton_4">
+                   <property name="text">
+                    <string>Linear Regression</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="DriverSelectionT1">
+         <attribute name="title">
+          <string>Driver Selection T1</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="minimumSize">
+             <size>
+              <width>4</width>
+              <height>3</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Select Drivers</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QTableWidget" name="tableWidget_2">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <row>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>3</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>4</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>5</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>6</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>7</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>8</string>
+                </property>
+               </row>
+               <row>
+                <property name="text">
+                 <string>9</string>
+                </property>
+               </row>
+               <column>
+                <property name="text">
+                 <string>Class</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>ClassNumber</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>slope</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>elevation</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>distourban</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>distostream</string>
+                </property>
+               </column>
+               <item row="0" column="0">
+                <property name="text">
+                 <string>BU</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="0" column="1">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+                <property name="flags">
+                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                </property>
+               </item>
+               <item row="0" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="0" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="0" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="0" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="1" column="0">
+                <property name="text">
+                 <string>DBF</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="1" column="1">
+                <property name="text">
+                 <string>1</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+                <property name="flags">
+                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                </property>
+               </item>
+               <item row="1" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="1" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="1" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="1" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="2" column="0">
+                <property name="text">
+                 <string>CL</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="2" column="1">
+                <property name="text">
+                 <string>2</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+                <property name="flags">
+                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                </property>
+               </item>
+               <item row="2" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="2" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="2" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="2" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="3" column="0">
+                <property name="text">
+                 <string>FL</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="3" column="1">
+                <property name="text">
+                 <string>3</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+                <property name="flags">
+                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                </property>
+               </item>
+               <item row="3" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="3" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="3" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="3" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="4" column="0">
+                <property name="text">
+                 <string>GL</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="4" column="1">
+                <property name="text">
+                 <string>4</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+                <property name="flags">
+                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                </property>
+               </item>
+               <item row="4" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="4" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="4" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="4" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="5" column="0">
+                <property name="text">
+                 <string>MF</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="5" column="1">
+                <property name="text">
+                 <string>5</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+                <property name="flags">
+                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                </property>
+               </item>
+               <item row="5" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="5" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="5" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="5" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="6" column="0">
+                <property name="text">
+                 <string>PL</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="6" column="1">
+                <property name="text">
+                 <string>6</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+               </item>
+               <item row="6" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/slope.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="6" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/elevation.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="6" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="6" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="7" column="0">
+                <property name="text">
+                 <string>SL</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="7" column="1">
+                <property name="text">
+                 <string>7</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+               </item>
+               <item row="7" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="7" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="7" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="7" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="8" column="0">
+                <property name="text">
+                 <string>WB</string>
+                </property>
+                <property name="checkState">
+                 <enum>Unchecked</enum>
+                </property>
+               </item>
+               <item row="8" column="1">
+                <property name="text">
+                 <string>8</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+                </property>
+               </item>
+               <item row="8" column="2">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="8" column="3">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="8" column="4">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+               <item row="8" column="5">
+                <property name="text">
+                 <string>/home/akjha/drivers/disttourban.img</string>
+                </property>
+                <property name="checkState">
+                 <enum>Checked</enum>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="CreateSutiabilityMap">
+         <attribute name="title">
+          <string>Create Suitability Map</string>
+         </attribute>
+         <widget class="QWidget" name="gridLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>891</width>
+            <height>251</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="minimumSize">
+              <size>
+               <width>4</width>
+               <height>3</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Select Drivers</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QTableWidget" name="tableWidget_5">
+                <row>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>9</string>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>Class</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>slope</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>elevation</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>disttourban</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>disttostream</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string>BU</string>
+                 </property>
+                </item>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="0" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="0" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>DBF</string>
+                 </property>
+                </item>
+                <item row="1" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="1" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="1" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="1" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="2" column="0">
+                 <property name="text">
+                  <string>CL</string>
+                 </property>
+                </item>
+                <item row="2" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="2" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="2" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="2" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="3" column="0">
+                 <property name="text">
+                  <string>FL</string>
+                 </property>
+                </item>
+                <item row="3" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="3" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="3" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="3" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="4" column="0">
+                 <property name="text">
+                  <string>GL</string>
+                 </property>
+                </item>
+                <item row="4" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="4" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="4" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="4" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="5" column="0">
+                 <property name="text">
+                  <string>MF</string>
+                 </property>
+                </item>
+                <item row="5" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="5" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="5" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="5" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="6" column="0">
+                 <property name="text">
+                  <string>PL</string>
+                 </property>
+                </item>
+                <item row="6" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="6" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="6" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="6" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="7" column="0">
+                 <property name="text">
+                  <string>SL</string>
+                 </property>
+                </item>
+                <item row="7" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="7" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="7" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="7" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="8" column="0">
+                 <property name="text">
+                  <string>WB</string>
+                 </property>
+                </item>
+                <item row="8" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="8" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="8" column="3">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+                <item row="8" column="4">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="checkState">
+                  <enum>Checked</enum>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>250</y>
+            <width>841</width>
+            <height>231</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Migration Order</string>
+          </property>
+          <widget class="QTableWidget" name="tableWidget_6">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>871</width>
+             <height>231</height>
+            </rect>
+           </property>
+           <row>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>9</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Class</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>BU</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>DBF</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>CL</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>FL</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>GL</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>MF</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>PL</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>SL</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>WB</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>BU</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>DBF</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="5">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>CL</string>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="5">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>FL</string>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="5">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="0">
+            <property name="text">
+             <string>GL</string>
+            </property>
+           </item>
+           <item row="4" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="5">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="0">
+            <property name="text">
+             <string>MF</string>
+            </property>
+           </item>
+           <item row="5" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="5">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="0">
+            <property name="text">
+             <string>PL</string>
+            </property>
+           </item>
+           <item row="6" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="4">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="5">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="6">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="0">
+            <property name="text">
+             <string>SL</string>
+            </property>
+           </item>
+           <item row="7" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="4">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="5">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="6">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="0">
+            <property name="text">
+             <string>WB</string>
+            </property>
+           </item>
+           <item row="8" column="3">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="4">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="5">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="6">
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="DemandAllocation">
+         <attribute name="title">
+          <string>Demand Allocation</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>891</width>
+            <height>211</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>4</width>
+            <height>3</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Policies</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QTableWidget" name="tableWidget_4">
+             <row>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>4</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>6</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>Class</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Demand</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Restriction</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Spatial Context</string>
+              </property>
+             </column>
+             <item row="0" column="0">
+              <property name="text">
+               <string>BU</string>
+              </property>
+              <property name="flags">
+               <set>ItemIsSelectable|ItemIsEditable|ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
+             </item>
+             <item row="0" column="1">
+              <property name="text">
+               <string>2316</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
+             </item>
+             <item row="0" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Checked</enum>
+              </property>
+             </item>
+             <item row="0" column="3">
+              <property name="text">
+               <string>3</string>
+              </property>
+              <property name="checkState">
+               <enum>Checked</enum>
+              </property>
+             </item>
+             <item row="1" column="0">
+              <property name="text">
+               <string>DBF</string>
+              </property>
+             </item>
+             <item row="1" column="1">
+              <property name="text">
+               <string>35245</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="1" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="1" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="2" column="0">
+              <property name="text">
+               <string>CL</string>
+              </property>
+             </item>
+             <item row="2" column="1">
+              <property name="text">
+               <string>11306</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="2" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="2" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="3" column="0">
+              <property name="text">
+               <string>FL</string>
+              </property>
+             </item>
+             <item row="3" column="1">
+              <property name="text">
+               <string>1762</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="3" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="3" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="4" column="0">
+              <property name="text">
+               <string>GL</string>
+              </property>
+             </item>
+             <item row="4" column="1">
+              <property name="text">
+               <string>5</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="4" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="4" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="5" column="0">
+              <property name="text">
+               <string>MF</string>
+              </property>
+             </item>
+             <item row="5" column="1">
+              <property name="text">
+               <string>71</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="5" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="5" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>230</y>
+            <width>902</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Execute</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="ComposeRaster">
+         <attribute name="title">
+          <string>Compose Raster</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>number Of File</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="spinBox_2">
+                <property name="value">
+                 <number>2</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLineEdit" name="lineEdit_2">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>1000</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Ouput Grid</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <widget class="QTableWidget" name="tableWidget">
+              <row>
+               <property name="text">
+                <string>1</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>2</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>File Location</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Select</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Grid Size</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string>/home/akjha/ouput1.img</string>
+               </property>
+              </item>
+              <item row="0" column="1">
+               <property name="text">
+                <string>Select File</string>
+               </property>
+              </item>
+              <item row="0" column="2">
+               <property name="text">
+                <string>1000</string>
+               </property>
+              </item>
+              <item row="1" column="0">
+               <property name="text">
+                <string>/home/akjha/output2.img</string>
+               </property>
+              </item>
+              <item row="1" column="1">
+               <property name="text">
+                <string>Select File</string>
+               </property>
+              </item>
+              <item row="1" column="2">
+               <property name="text">
+                <string>250</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="pushButton">
+              <property name="text">
+               <string>Compose Raster</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="maximum">
+       <number>60</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>794</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cbCreateGrid_TO</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pbConvert_T0</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>682</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>765</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbCreateGrid_T1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pbConvert_T1</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>682</x>
+     <y>248</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>765</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbCreateGrid_Mask</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pbConvert_Mask</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>682</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>765</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
