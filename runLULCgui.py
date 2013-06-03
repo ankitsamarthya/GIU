@@ -35,6 +35,7 @@ class MyForm(QtGui.QMainWindow):
     QtGui.QMessageBox.about(self, "My message box", "rvalue = %s" % (rvalue));
         
   def __init__(self, parent=None):
+    R.r(''' source('Rasterise_dev_6.R') ''')
     QtGui.QWidget.__init__(self, parent)
     self.ui = Ui_LULCModel()
     self.ui.setupUi(self)
@@ -69,9 +70,8 @@ class MyForm(QtGui.QMainWindow):
 
   @pyqtSignature("")
   def on_pbConvert_T0_clicked(self):
-      R.r(''' source('Rasterise_dev_6.R') ''')
       r_rasterize = R.globalenv['rasterise']
-      r_rasterize(self.__shpfileT0,self.__layerT0,1000)
+      r_rasterize(self.__shpfileT0,self.__layerT0,self.ui.sbGridsize.value())
 
   @pyqtSignature("")
   def on_pbSelectFile_T1_clicked(self):
@@ -85,9 +85,8 @@ class MyForm(QtGui.QMainWindow):
   
   @pyqtSignature("")
   def on_pbConvert_T1_clicked(self):
-      R.r(''' source('Rasterise_dev_6.R') ''')
       r_rasterize = R.globalenv['rasterise']
-      r_rasterize(self.__shpfileT1,self.__layerT1,1000)
+      r_rasterize(self.__shpfileT1,self.__layerT1,self.ui.sbGridsize.value())
 
   @pyqtSignature("")
 
