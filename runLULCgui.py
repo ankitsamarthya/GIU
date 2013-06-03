@@ -1,5 +1,6 @@
 import sys
 import os.path
+from os.path import basename, splitext
 
 #################QT GUI IMPORTS#################
 from PyQt4 import QtCore, QtGui
@@ -8,8 +9,8 @@ from PyQt4.QtCore import pyqtSignature
 from LULCgui import Ui_LULCModel
 
 #################FOR R IMPORT####################
-#import rpy2.robjects as R
-#from rpy2.robjects.packages import importr 
+import rpy2.robjects as R
+from rpy2.robjects.packages import importr 
 
 
  
@@ -24,6 +25,10 @@ class MyForm(QtGui.QMainWindow):
   __text = ""
   __raster = True
   __currentDirectory="."
+  __layerT0 = ""
+  __layerT1 = ""
+  __shpfileT0 = ""
+  __shpfileT1 = ""
 
   def r_converToRaster():
     rvalue = R.r['pi']
@@ -55,26 +60,47 @@ class MyForm(QtGui.QMainWindow):
   @pyqtSignature("")
   def on_pbSelectFile_T0_clicked(self):
         file = QtGui.QFileDialog.getOpenFileName(self, "Open File",
-                            self.__currentDirectory,"Raster (*.tiff *.tif )");
+                            self.__currentDirectory,"Raster (*.tiff *.tif *.shp)");
         (dirName, fileName) = os.path.split(str(file))
         self.__currentDirectory=dirName
+        self.__layerT0=splitext(fileName)[0]
+        self.__shpfileT0 = str(file)
         self.ui.leT0File.setText(str(file))
 
+  @pyqtSignature("")
+  def on_pbConvert_T0_clicked(self):
+      R.r(''' source('Rasterise_dev_6.R') ''')
+      r_rasterize = R.globalenv['rasterise']
+      r_rasterize(self.__shpfileT0,self.__layerT0,1000)
 
   @pyqtSignature("")
   def on_pbSelectFile_T1_clicked(self):
         file = QtGui.QFileDialog.getOpenFileName(self, "Open File",
-                            self.__currentDirectory,"Raster (*.tiff *.tif )");
+                            self.__currentDirectory,"Raster (*.tiff *.tif *.shp)");
         (dirName, fileName) = os.path.split(str(file))
         self.__currentDirectory=dirName
+        self.__layerT1=splitext(fileName)[0]
+        self.__shpfileT1 = str(file)
         self.ui.leT1File.setText(str(file))
+  
+  @pyqtSignature("")
+  def on_pbConvert_T1_clicked(self):
+      R.r(''' source('Rasterise_dev_6.R') ''')
+      r_rasterize = R.globalenv['rasterise']
+      r_rasterize(self.__shpfileT1,self.__layerT1,1000)
 
-  @pyqtSignature("")
-  def on_pbSelectFile_Mask_clicked(self):
-        file = QtGui.QFileDialog.getOpenFileName(self, "Open File",
-                            self.__currentDirectory,"Raster (*.tiff *.tif )");
-        (dirName, fileName) = os.path.split(str(file))
-        self.__currentDirectory=dirName
+  @pyqtSignature("")
+
+  def on_pbSelectFile_Mask_clicked(self):
+
+        file = QtGui.QFileDialog.getOpenFileName(self, "Open File",
+
+                            self.__currentDirectory,"Raster (*.tiff *.tif )");
+
+        (dirName, fileName) = os.path.split(str(file))
+
+        self.__currentDirectory=dirName
+
         self.ui.leMaskFile.setText(str(file))
     
 
