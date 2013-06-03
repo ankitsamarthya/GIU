@@ -64,14 +64,17 @@
                <item row="0" column="1">
                 <widget class="QLineEdit" name="leOutputFile">
                  <property name="text">
-                  <string>/home/akjha/ouput/predict2005.img</string>
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Output Raster File</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="2">
                 <widget class="QPushButton" name="pbSelectFile_OutputFile">
                  <property name="text">
-                  <string>Select File</string>
+                  <string>Save</string>
                  </property>
                 </widget>
                </item>
@@ -94,6 +97,13 @@
                   </size>
                  </property>
                 </spacer>
+               </item>
+               <item row="1" column="1">
+                <widget class="QTextBrowser" name="tbOutputLog">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
                </item>
               </layout>
              </widget>
@@ -236,27 +246,42 @@
                <item row="2" column="1">
                 <widget class="QLineEdit" name="leT0File">
                  <property name="text">
-                  <string>/home/akjha/data/1985.img</string>
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>/file/path.shp</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="1">
                 <widget class="QLineEdit" name="leT1File">
                  <property name="text">
-                  <string>/home/akjha/data/1995.img</string>
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>/file/path.shp</string>
                  </property>
                 </widget>
                </item>
                <item row="4" column="1">
                 <widget class="QLineEdit" name="leMaskFile">
                  <property name="text">
-                  <string>/home/akjha/data/mask.img</string>
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>/file/mask.tiff</string>
                  </property>
                 </widget>
                </item>
                <item row="2" column="4">
                 <widget class="QLineEdit" name="leYear_TO">
                  <property name="text">
+                  <string/>
+                 </property>
+                 <property name="maxLength">
+                  <number>4</number>
+                 </property>
+                 <property name="placeholderText">
                   <string>1985</string>
                  </property>
                 </widget>
@@ -264,6 +289,12 @@
                <item row="3" column="4">
                 <widget class="QLineEdit" name="leYear_T1">
                  <property name="text">
+                  <string/>
+                 </property>
+                 <property name="maxLength">
+                  <number>4</number>
+                 </property>
+                 <property name="placeholderText">
                   <string>1995</string>
                  </property>
                 </widget>
@@ -288,7 +319,10 @@
                <item row="0" column="1">
                 <widget class="QLineEdit" name="leProjectDirectory">
                  <property name="text">
-                  <string>/home/akjha/Lulc</string>
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Project Directory</string>
                  </property>
                 </widget>
                </item>
@@ -308,7 +342,7 @@
                   <bool>true</bool>
                  </property>
                  <property name="minimum">
-                  <number>50</number>
+                  <number>65</number>
                  </property>
                  <property name="maximum">
                   <number>250000</number>
@@ -376,7 +410,7 @@
              <item>
               <layout class="QGridLayout" name="gridLayout_7">
                <item row="0" column="0">
-                <widget class="QPushButton" name="pushButton_16">
+                <widget class="QPushButton" name="pbAddDriver">
                  <property name="enabled">
                   <bool>true</bool>
                  </property>
@@ -398,6 +432,9 @@
                   <widget class="QTableWidget" name="tableWidget">
                    <property name="sortingEnabled">
                     <bool>false</bool>
+                   </property>
+                   <property name="rowCount">
+                    <number>4</number>
                    </property>
                    <row>
                     <property name="text">
@@ -431,12 +468,12 @@
                    </column>
                    <column>
                     <property name="text">
-                     <string/>
+                     <string>File</string>
                     </property>
                    </column>
                    <column>
                     <property name="text">
-                     <string/>
+                     <string>Model</string>
                     </property>
                    </column>
                    <item row="0" column="0">

@@ -1,4 +1,5 @@
-import sys
+import sys, os
+import shutil
 import os.path
 from os.path import basename, splitext
 
@@ -72,6 +73,7 @@ class MyForm(QtGui.QMainWindow):
   def on_pbConvert_T0_clicked(self):
       r_rasterize = R.globalenv['rasterise']
       r_rasterize(self.__shpfileT0,self.__layerT0,self.ui.sbGridsize.value())
+      self.ui.leOutputFile.setText(str(self.__currentDirectory)+"/"+self.__layerT0+".tif")
 
   @pyqtSignature("")
   def on_pbSelectFile_T1_clicked(self):
@@ -103,6 +105,8 @@ class MyForm(QtGui.QMainWindow):
         self.ui.leMaskFile.setText(str(file))
     
 
+  
+
   @pyqtSignature("")
   def on_rbRasterFile_clicked(self):
     if (self.__raster==False):
@@ -131,12 +135,13 @@ class MyForm(QtGui.QMainWindow):
         """dir = QtGui.QFileDialog.getSaveFileName(self, "Output File",
                             self.__projectDirectory,"*.tif");
         
-        self.ui.leOutputFile.setText(str(dir))"""
-        file = QtGui.QFileDialog.getSaveFileName(self, "Output File",
+        self.ui.leOutputFile.setText(str(dir))
+        file = QtGui.QFileDialog.getOpenFileName(self, "Output File",
                             self.__projectDirectory,"Raster (*.tiff *.tif )");
         (dirName, fileName) = os.path.split(str(file))
         self.__currentDirectory=dirName
-        self.ui.leOutputFile.setText(str(file))
+        self.ui.leOutputFile.setText(str(file))"""
+        shutil.move(self.__layerT0+".tif",str(self.__projectDirectory))
 
 
   @pyqtSignature("")
@@ -154,7 +159,12 @@ class MyForm(QtGui.QMainWindow):
     self.ui.progressBar.setProperty("value",20)
   
     
-    
+#################Module:2####################
+
+  @pyqtSignature("")
+  def on_pbAddDriver_clicked(self):
+    self.ui.tableWidget.setRowCount(self.ui.tableWidget.rowCount() + 1)
+  
  
 if __name__ == "__main__":
   app = QtGui.QApplication(sys.argv)

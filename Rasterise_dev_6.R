@@ -520,7 +520,8 @@ debug<-as.character(inputShape@data$IGBP_POLY)
 
 errorpoly=unique(dtbl[subset(dtblagg[weight>1],select='cell')]$IGBP_POLY)
 write.table(errorpoly,file=paste(layerName,"errorpoly.csv",sep="-"),sep=",")
-	mr<-createMutliRaster(inputClassCode,outputRaster,dtblagg)	
+	mr<-createMutliRaster(inputClassCode,outputRaster,dtblagg)
+	writeRaster(mr, filename=paste(layerName,".tif",sep=""), options="INTERLEAVE=BAND", overwrite=TRUE)	
 	return(mr)
 
 
