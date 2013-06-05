@@ -142,7 +142,7 @@ class MyForm(QtGui.QMainWindow):
         self.__currentDirectory=dirName
         self.ui.leOutputFile.setText(str(file))"""
         shutil.move(self.__layerT0+".tif",str(self.__projectDirectory))
-
+	self.ui.tbLog.setText(self.__layerT0+".tif saved to "+str(self.__projectDirectory))
 
   @pyqtSignature("")
   def on_pbConvertToRaster_T0_clicked(self):
@@ -164,8 +164,57 @@ class MyForm(QtGui.QMainWindow):
   @pyqtSignature("")
   def on_pbAddDriver_clicked(self):
     self.ui.tableWidget.setRowCount(self.ui.tableWidget.rowCount() + 1)
-  
- 
+    self.pbSelectDriver = QtGui.QPushButton()
+    self.pbSelectDriver.setText("Select Driver")
+    self.pbSelectDriver.setObjectName("pbSelectDriver"+str(self.ui.tableWidget.rowCount()-1))
+    self.ui.tableWidget.setCellWidget(self.ui.tableWidget.rowCount()-1, 2, self.pbSelectDriver)
+    self.makeCombo()    
+    self.ui.tableWidget.setCellWidget(self.ui.tableWidget.rowCount()-1, 3, self.cbModel)
+
+  def makeCombo(self):
+    self.cbModel = QtGui.QComboBox()
+    self.cbModel.setMaxCount(3)
+    self.cbModel.setObjectName("cbModel")
+    self.cbModel.addItem("iLoR")
+    self.cbModel.addItem("iLiR")
+    self.cbModel.addItem("iMLP")
+    self.cbModel.setItemText(0, QtGui.QApplication.translate("", "Logistic R", None, QtGui.QApplication.UnicodeUTF8))
+    self.cbModel.setItemText(1, QtGui.QApplication.translate("", "Linear R", None, QtGui.QApplication.UnicodeUTF8))
+    self.cbModel.setItemText(2, QtGui.QApplication.translate("", "MLP", None, QtGui.QApplication.UnicodeUTF8))
+       
+
+  @pyqtSignature("")
+  def on_rbLogR_clicked(self):
+	i=0	
+	while i<self.ui.tableWidget.rowCount():
+		self.label = QtGui.QLabel("Logistic R")	
+		self.ui.tableWidget.setCellWidget(i, 3,self.label)
+		i=i+1
+    
+  @pyqtSignature("")
+  def on_rbLinR_clicked(self):
+	i=0	
+	while i<self.ui.tableWidget.rowCount():
+		self.label = QtGui.QLabel("Linear R")	
+		self.ui.tableWidget.setCellWidget(i, 3,self.label)
+		i=i+1
+
+  @pyqtSignature("")
+  def on_rbMLP_clicked(self):
+	i=0	
+	while i<self.ui.tableWidget.rowCount():
+		self.label = QtGui.QLabel("MLP")	
+		self.ui.tableWidget.setCellWidget(i, 3,self.label)
+		i=i+1
+
+  @pyqtSignature("")
+  def on_rbIS_clicked(self):
+	i=0	
+	while i<self.ui.tableWidget.rowCount():	
+		self.makeCombo()
+		self.ui.tableWidget.setCellWidget(i, 3,self.cbModel)
+		i=i+1
+
 if __name__ == "__main__":
   app = QtGui.QApplication(sys.argv)
   myapp = MyForm()
