@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, random, time
 import shutil
 import os.path
 from os.path import basename, splitext
@@ -13,15 +13,39 @@ from LULCgui import Ui_LULCModel
 import rpy2.robjects as R
 from rpy2.robjects.packages import importr 
 
+__consti = 0
 
+class MyThread(QtCore.QThread):
+    trigger = QtCore.pyqtSignal(int)
+
+    def __init__(self, parent=None):
+        super(MyThread, self).__init__(parent)
+
+    def setup(self, thread_no):
+        self.thread_no = thread_no
+
+    def run(self):
+        #time.sleep(random.random()*5)   
+        self.trigger.emit(self.thread_no)
+
+class MyThread1(QtCore.QThread):
+    trigger1 = QtCore.pyqtSignal(int)
+
+    def __init__(self, parent=None):
+        super(MyThread1, self).__init__(parent)
+
+    def setup(self, thread_no):
+        self.thread_no = thread_no
+
+    def run(self):
+        #time.sleep(random.random()*5)   
+        self.trigger1.emit(self.thread_no)        
  
 class MyForm(QtGui.QMainWindow):
-
-
-  
   
   ###############################333
   #Add all the save variable here
+  global __consti
   __projectDirectory = "."
   __text = ""
   __raster = True
@@ -30,11 +54,14 @@ class MyForm(QtGui.QMainWindow):
   __layerT1 = ""
   __shpfileT0 = ""
   __shpfileT1 = ""
+  __check = 1
+  
 
   def r_converToRaster():
     rvalue = R.r['pi']
     QtGui.QMessageBox.about(self, "My message box", "rvalue = %s" % (rvalue));
         
+  
   def __init__(self, parent=None):
     R.r(''' source('Rasterise_dev_6.R') ''')
     QtGui.QWidget.__init__(self, parent)
@@ -42,13 +69,22 @@ class MyForm(QtGui.QMainWindow):
     self.ui.setupUi(self)
     #self.setGeometry(100,60,900,700)
     self.setWindowTitle("Project IIRS")
+    self.ui.leOutputFile.setText("")
     #self.setWindowIcon(QtGui.QIcon('icons/name.png'))
     #All the new objects here as self.ui.
 
    ##################################
   #Adding icon to the project
-  
-    
+
+  def update_text(self, thread_no):
+        QtGui.QApplication.processEvents()
+        time.sleep(random.uniform(0,0.7))
+        self.ui.tbLog.setText(str(self.__check)+"% Completed")
+        self.__check = self.__check + 1
+        if(self.__check == 100):
+          self.ui.leOutputFile.setText(str(self.__currentDirectory)+"/"+self.__layerT0+".tif")
+        QtGui.QApplication.processEvents()
+      
     
     #Add all the requuired signles Here
   @pyqtSignature("")
@@ -70,10 +106,28 @@ class MyForm(QtGui.QMainWindow):
         self.ui.leT0File.setText(str(file))
 
   @pyqtSignature("")
-  def on_pbConvert_T0_clicked(self):
-      r_rasterize = R.globalenv['rasterise']
-      r_rasterize(self.__shpfileT0,self.__layerT0,self.ui.sbGridsize.value())
-      self.ui.leOutputFile.setText(str(self.__currentDirectory)+"/"+self.__layerT0+".tif")
+  def on_pbConvert_T0_clicked(self):      
+      self.threads = []
+      # this will keep a reference to threads
+      QtGui.QApplication.processEvents()
+      for i in range(100):
+            thread = MyThread(self)    # create a thread
+            thread.trigger.connect(self.update_text)  # connect to it's signal
+            QtGui.QApplication.processEvents()
+            thread.setup(i)            # just setting up a parameter
+            thread.start()             # start the thread
+            self.threads.append(thread) # keep a reference
+      thread1 = MyThread1(self)
+      thread1.trigger1.connect(self.raster)
+      thread1.setup(0)
+      thread1.start()
+      self.threads.append(thread1)
+      #self.ui.leOutputFile.setText(str(self.__currentDirectory)+"/"+self.__layerT0+".tif")
+      
+  def raster(self, thread1_no):
+          r_rasterize = R.globalenv['rasterise']
+          r_rasterize(self.__shpfileT0,self.__layerT0,self.ui.sbGridsize.value())
+  
 
   @pyqtSignature("")
   def on_pbSelectFile_T1_clicked(self):
@@ -93,56 +147,21 @@ class MyForm(QtGui.QMainWindow):
   @pyqtSignature("")
 
   def on_pbSelectFile_Mask_clicked(self):
-
         file = QtGui.QFileDialog.getOpenFileName(self, "Open File",
-
                             self.__currentDirectory,"Raster (*.tiff *.tif )");
-
         (dirName, fileName) = os.path.split(str(file))
-
         self.__currentDirectory=dirName
-
         self.ui.leMaskFile.setText(str(file))
     
-
-  
-
-  @pyqtSignature("")
-  def on_rbRasterFile_clicked(self):
-    if (self.__raster==False):
-        self.ui.rbVectorFile.setChecked(False)
-        self.ui.pbConvertToRaster_T0.setEnabled(False)
-        self.ui.pbConvertToRaster_T1.setEnabled(False)
-        self.ui.rbRasterFile.setChecked(True)
-        self.__raster=True
-
-
-  @pyqtSignature("")
-  def on_rbVectorFile_clicked(self):
-        if (self.__raster):
-            self.ui.rbVectorFile.setChecked(True)
-            self.ui.pbConvertToRaster_T0.setEnabled(True)
-            self.ui.pbConvertToRaster_T1.setEnabled(True)
-            self.ui.rbRasterFile.setChecked(False)
-            self.__raster=False
 
   def getCurrentDirectory():
         return(self.__currentDirectory)
         
 
   @pyqtSignature("")
-  def on_pbSelectFile_OutputFile_clicked(self):
-        """dir = QtGui.QFileDialog.getSaveFileName(self, "Output File",
-                            self.__projectDirectory,"*.tif");
-        
-        self.ui.leOutputFile.setText(str(dir))
-        file = QtGui.QFileDialog.getOpenFileName(self, "Output File",
-                            self.__projectDirectory,"Raster (*.tiff *.tif )");
-        (dirName, fileName) = os.path.split(str(file))
-        self.__currentDirectory=dirName
-        self.ui.leOutputFile.setText(str(file))"""
+  def on_pbSelectFile_OutputFile_clicked(self):        
         shutil.move(self.__layerT0+".tif",str(self.__projectDirectory))
-	self.ui.tbLog.setText(self.__layerT0+".tif saved to "+str(self.__projectDirectory))
+        self.ui.tbLog.setText(self.__layerT0 + ".tif saved to " + str(self.__projectDirectory))
 
   @pyqtSignature("")
   def on_pbConvertToRaster_T0_clicked(self):
