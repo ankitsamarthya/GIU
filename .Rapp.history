@@ -1,0 +1,36 @@
+source(''' Rasterise_dev_6R ''')
+source(''' Rasterise_dev_6.R ''')
+source('Rasterise_dev_6.R')
+ls
+pwd
+ps
+ls
+facebook
+ls
+2+1
+443
+a=4
+b=5
+a=a+b-(b=a)
+a
+b
+clear
+clr
+clr()
+clear()
+a
+b
+a
+b
+a
+b
+ls
+x=4
+y=6
+x=x+y-(y=x)
+y
+x
+f[0]=6
+f<-new Array()
+f[0]<-'6'
+x=x+y-(y=x)

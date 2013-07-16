@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>794</width>
-    <height>639</height>
+    <width>921</width>
+    <height>733</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,7 +49,7 @@
                <rect>
                 <x>0</x>
                 <y>20</y>
-                <width>781</width>
+                <width>871</width>
                 <height>241</height>
                </rect>
               </property>
@@ -68,13 +68,6 @@
                  </property>
                  <property name="placeholderText">
                   <string>Output Raster File</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QPushButton" name="pbSelectFile_OutputFile">
-                 <property name="text">
-                  <string>Save</string>
                  </property>
                 </widget>
                </item>
@@ -125,7 +118,7 @@
                <rect>
                 <x>0</x>
                 <y>30</y>
-                <width>781</width>
+                <width>871</width>
                 <height>241</height>
                </rect>
               </property>
@@ -280,7 +273,7 @@
                 </widget>
                </item>
                <item row="2" column="4">
-                <widget class="QLineEdit" name="leYear_TO">
+                <widget class="QLineEdit" name="leYear_T0">
                  <property name="text">
                   <string/>
                  </property>
@@ -334,6 +327,9 @@
                </item>
                <item row="1" column="0">
                 <widget class="QLabel" name="label_7">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
                  <property name="text">
                   <string>Gridsize: </string>
                  </property>
@@ -362,7 +358,7 @@
                 </widget>
                </item>
                <item row="1" column="4">
-                <widget class="QLineEdit" name="lineEdit">
+                <widget class="QLineEdit" name="leNAValue">
                  <property name="text">
                   <string>128</string>
                  </property>
@@ -397,7 +393,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>771</width>
+            <width>881</width>
             <height>261</height>
            </rect>
           </property>
@@ -428,9 +424,9 @@
                <item row="1" column="0">
                 <layout class="QGridLayout" name="gridLayout_3">
                  <item row="1" column="1">
-                  <widget class="QPushButton" name="pushButton_6">
+                  <widget class="QPushButton" name="pbExecute">
                    <property name="text">
-                    <string>Next</string>
+                    <string>Execute</string>
                    </property>
                   </widget>
                  </item>
@@ -477,7 +473,7 @@
            <rect>
             <x>10</x>
             <y>260</y>
-            <width>771</width>
+            <width>871</width>
             <height>281</height>
            </rect>
           </property>
@@ -492,20 +488,13 @@
                <rect>
                 <x>10</x>
                 <y>20</y>
-                <width>741</width>
+                <width>851</width>
                 <height>251</height>
                </rect>
               </property>
               <layout class="QGridLayout" name="gridLayout_9">
-               <item row="1" column="1">
-                <widget class="QPushButton" name="pushButton_17">
-                 <property name="text">
-                  <string>Execute</string>
-                 </property>
-                </widget>
-               </item>
                <item row="4" column="1">
-                <widget class="QPushButton" name="pushButton_19">
+                <widget class="QPushButton" name="pbNextCreate">
                  <property name="text">
                   <string>Next</string>
                  </property>
@@ -529,7 +518,7 @@
                  <property name="title">
                   <string>Model ParaMeter Output</string>
                  </property>
-                 <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                 <widget class="QPlainTextEdit" name="teSummary">
                   <property name="enabled">
                    <bool>true</bool>
                   </property>
@@ -537,7 +526,7 @@
                    <rect>
                     <x>3</x>
                     <y>20</y>
-                    <width>641</width>
+                    <width>761</width>
                     <height>161</height>
                    </rect>
                   </property>
@@ -551,114 +540,7 @@
                    <enum>QPlainTextEdit::WidgetWidth</enum>
                   </property>
                   <property name="plainText">
-                   <string>$BU
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distourban  disttostream  
-    -0.57087      -4.89053       0.05153     -17.37234      -1.70906  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    10680 
-Residual Deviance: 7545 	AIC: 7555 
-
-$DBF
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-       7.987       -34.403       -21.125        -2.261         6.107  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    80660 
-Residual Deviance: 46930 	AIC: 46940 
-
-$class_2
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-   -12.20462      21.68842      27.38513       0.38717      -0.06995  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    57860 
-Residual Deviance: 21460 	AIC: 21470 
-
-$class_3
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-     -4.3284      -14.1903        5.2027       -0.7028       -3.8388  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    13500 
-Residual Deviance: 12930 	AIC: 12940 
-
-$class_4
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-      -49.82        -61.62        -38.16         59.76         26.86  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    103.9 
-Residual Deviance: 50.08 	AIC: 60.08 
-
-$class_5
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-      -8.341       -21.818        12.360        -6.098        -5.947  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    892.6 
-Residual Deviance: 792.2 	AIC: 802.2 
-
-$class_6
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-     -3.8802       -6.2561        0.8099        2.2640        0.9813  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    28320 
-Residual Deviance: 27090 	AIC: 27100 
-
-$class_7
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-      0.2006        5.8160      -13.2106        2.0149       -7.7734  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    13850 
-Residual Deviance: 11840 	AIC: 11850 
-
-$class_8
-
-Call:  glm(formula = frml, family = binomial, data = dta, na.action = &quot;na.omit&quot;)
-
-Coefficients:
- (Intercept)         slope     elevation      distoueb  disttostream  
-      1.9138       -4.2583       -0.7237        0.6141     -206.6887  
-
-Degrees of Freedom: 59595 Total (i.e. Null);  59591 Residual
-Null Deviance:	    35680 
-Residual Deviance: 8416 	AIC: 8426 
-</string>
+                   <string/>
                   </property>
                  </widget>
                 </widget>
@@ -726,7 +608,7 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
-              <widget class="QTableWidget" name="tableWidget_2">
+              <widget class="QTableWidget" name="twDriverSelection">
                <property name="enabled">
                 <bool>true</bool>
                </property>
@@ -785,26 +667,6 @@ Residual Deviance: 8416 	AIC: 8426
                  <string>ClassNumber</string>
                 </property>
                </column>
-               <column>
-                <property name="text">
-                 <string>slope</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>elevation</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>distourban</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>distostream</string>
-                </property>
-               </column>
                <item row="0" column="0">
                 <property name="text">
                  <string>BU</string>
@@ -821,39 +683,7 @@ Residual Deviance: 8416 	AIC: 8426
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
-                </property>
-               </item>
-               <item row="0" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="0" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="0" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="0" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable</set>
                 </property>
                </item>
                <item row="1" column="0">
@@ -872,39 +702,7 @@ Residual Deviance: 8416 	AIC: 8426
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
-                </property>
-               </item>
-               <item row="1" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="1" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="1" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="1" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable</set>
                 </property>
                </item>
                <item row="2" column="0">
@@ -923,39 +721,7 @@ Residual Deviance: 8416 	AIC: 8426
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
-                </property>
-               </item>
-               <item row="2" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="2" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="2" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="2" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable</set>
                 </property>
                </item>
                <item row="3" column="0">
@@ -974,39 +740,7 @@ Residual Deviance: 8416 	AIC: 8426
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
-                </property>
-               </item>
-               <item row="3" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="3" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="3" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="3" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable</set>
                 </property>
                </item>
                <item row="4" column="0">
@@ -1025,39 +759,7 @@ Residual Deviance: 8416 	AIC: 8426
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
-                </property>
-               </item>
-               <item row="4" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="4" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="4" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="4" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable</set>
                 </property>
                </item>
                <item row="5" column="0">
@@ -1076,39 +778,7 @@ Residual Deviance: 8416 	AIC: 8426
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
-                </property>
-               </item>
-               <item row="5" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="5" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="5" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="5" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable</set>
                 </property>
                </item>
                <item row="6" column="0">
@@ -1126,37 +796,8 @@ Residual Deviance: 8416 	AIC: 8426
                 <property name="textAlignment">
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
-               </item>
-               <item row="6" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/slope.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="6" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/elevation.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="6" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="6" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                <property name="flags">
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item row="7" column="0">
@@ -1174,37 +815,8 @@ Residual Deviance: 8416 	AIC: 8426
                 <property name="textAlignment">
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
-               </item>
-               <item row="7" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="7" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="7" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="7" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                <property name="flags">
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item row="8" column="0">
@@ -1222,39 +834,17 @@ Residual Deviance: 8416 	AIC: 8426
                 <property name="textAlignment">
                  <set>AlignHCenter|AlignVCenter|AlignCenter</set>
                 </property>
-               </item>
-               <item row="8" column="2">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
+                <property name="flags">
+                 <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
-               <item row="8" column="3">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="8" column="4">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
-               <item row="8" column="5">
-                <property name="text">
-                 <string>/home/akjha/drivers/disttourban.img</string>
-                </property>
-                <property name="checkState">
-                 <enum>Checked</enum>
-                </property>
-               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pbNextSuitable">
+               <property name="text">
+                <string>Next</string>
+               </property>
               </widget>
              </item>
             </layout>
@@ -1289,7 +879,7 @@ Residual Deviance: 8416 	AIC: 8426
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_6">
               <item>
-               <widget class="QTableWidget" name="tableWidget_5">
+               <widget class="QTableWidget" name="twCreateSuitability">
                 <row>
                  <property name="text">
                   <string>1</string>
@@ -1340,61 +930,9 @@ Residual Deviance: 8416 	AIC: 8426
                   <string>Class</string>
                  </property>
                 </column>
-                <column>
-                 <property name="text">
-                  <string>slope</string>
-                 </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>elevation</string>
-                 </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>disttourban</string>
-                 </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>disttostream</string>
-                 </property>
-                </column>
                 <item row="0" column="0">
                  <property name="text">
                   <string>BU</string>
-                 </property>
-                </item>
-                <item row="0" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="0" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="0" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="0" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
                  </property>
                 </item>
                 <item row="1" column="0">
@@ -1402,73 +940,9 @@ Residual Deviance: 8416 	AIC: 8426
                   <string>DBF</string>
                  </property>
                 </item>
-                <item row="1" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="1" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="1" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="1" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
                 <item row="2" column="0">
                  <property name="text">
                   <string>CL</string>
-                 </property>
-                </item>
-                <item row="2" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="2" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="2" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="2" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
                  </property>
                 </item>
                 <item row="3" column="0">
@@ -1476,73 +950,9 @@ Residual Deviance: 8416 	AIC: 8426
                   <string>FL</string>
                  </property>
                 </item>
-                <item row="3" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="3" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="3" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="3" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
                 <item row="4" column="0">
                  <property name="text">
                   <string>GL</string>
-                 </property>
-                </item>
-                <item row="4" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="4" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="4" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="4" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
                  </property>
                 </item>
                 <item row="5" column="0">
@@ -1550,73 +960,9 @@ Residual Deviance: 8416 	AIC: 8426
                   <string>MF</string>
                  </property>
                 </item>
-                <item row="5" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="5" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="5" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="5" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
                 <item row="6" column="0">
                  <property name="text">
                   <string>PL</string>
-                 </property>
-                </item>
-                <item row="6" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="6" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="6" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="6" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
                  </property>
                 </item>
                 <item row="7" column="0">
@@ -1624,73 +970,9 @@ Residual Deviance: 8416 	AIC: 8426
                   <string>SL</string>
                  </property>
                 </item>
-                <item row="7" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="7" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="7" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="7" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
                 <item row="8" column="0">
                  <property name="text">
                   <string>WB</string>
-                 </property>
-                </item>
-                <item row="8" column="1">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="8" column="2">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="8" column="3">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
-                 </property>
-                </item>
-                <item row="8" column="4">
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="checkState">
-                  <enum>Checked</enum>
                  </property>
                 </item>
                </widget>
@@ -1705,8 +987,8 @@ Residual Deviance: 8416 	AIC: 8426
            <rect>
             <x>0</x>
             <y>250</y>
-            <width>841</width>
-            <height>231</height>
+            <width>891</width>
+            <height>321</height>
            </rect>
           </property>
           <property name="title">
@@ -1718,7 +1000,7 @@ Residual Deviance: 8416 	AIC: 8426
              <x>0</x>
              <y>20</y>
              <width>871</width>
-             <height>231</height>
+             <height>261</height>
             </rect>
            </property>
            <row>
@@ -1844,6 +1126,9 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="0" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -1865,6 +1150,30 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="0" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="0" column="9">
             <property name="text">
              <string/>
             </property>
@@ -1894,6 +1203,9 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="1" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -1915,6 +1227,30 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="1" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="1" column="9">
             <property name="text">
              <string/>
             </property>
@@ -1944,6 +1280,9 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="2" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -1965,6 +1304,30 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="2" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="2" column="9">
             <property name="text">
              <string/>
             </property>
@@ -1994,6 +1357,9 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="3" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -2015,6 +1381,30 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="3" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="3" column="9">
             <property name="text">
              <string/>
             </property>
@@ -2044,6 +1434,9 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="4" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -2065,6 +1458,30 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="4" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="4" column="9">
             <property name="text">
              <string/>
             </property>
@@ -2094,6 +1511,9 @@ Residual Deviance: 8416 	AIC: 8426
             </property>
            </item>
            <item row="5" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -2122,27 +1542,103 @@ Residual Deviance: 8416 	AIC: 8426
              <enum>Unchecked</enum>
             </property>
            </item>
+           <item row="5" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="5" column="9">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
            <item row="6" column="0">
             <property name="text">
              <string>PL</string>
             </property>
            </item>
+           <item row="6" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
            <item row="6" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="6" column="4">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="6" column="5">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="6" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="6" column="9">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -2152,22 +1648,74 @@ Residual Deviance: 8416 	AIC: 8426
              <string>SL</string>
             </property>
            </item>
+           <item row="7" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
            <item row="7" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="7" column="4">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="7" column="5">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="7" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="7" column="9">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
@@ -2177,27 +1725,92 @@ Residual Deviance: 8416 	AIC: 8426
              <string>WB</string>
             </property>
            </item>
+           <item row="8" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="2">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
            <item row="8" column="3">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="8" column="4">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="8" column="5">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
            <item row="8" column="6">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="7">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="8">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+           </item>
+           <item row="8" column="9">
+            <property name="text">
+             <string/>
+            </property>
             <property name="checkState">
              <enum>Unchecked</enum>
             </property>
            </item>
           </widget>
+         </widget>
+         <widget class="QPushButton" name="pbNextDemandAlloc">
+          <property name="geometry">
+           <rect>
+            <x>760</x>
+            <y>580</y>
+            <width>114</width>
+            <height>32</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Next</string>
+          </property>
          </widget>
         </widget>
         <widget class="QWidget" name="DemandAllocation">
@@ -2209,8 +1822,8 @@ Residual Deviance: 8416 	AIC: 8426
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>891</width>
-            <height>211</height>
+            <width>881</width>
+            <height>551</height>
            </rect>
           </property>
           <property name="minimumSize">
@@ -2224,7 +1837,7 @@ Residual Deviance: 8416 	AIC: 8426
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
-            <widget class="QTableWidget" name="tableWidget_4">
+            <widget class="QTableWidget" name="twDemandAlloc">
              <row>
               <property name="text">
                <string>1</string>
@@ -2253,6 +1866,21 @@ Residual Deviance: 8416 	AIC: 8426
              <row>
               <property name="text">
                <string>6</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>7</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>8</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>9</string>
               </property>
              </row>
              <column>
@@ -2287,27 +1915,21 @@ Residual Deviance: 8416 	AIC: 8426
               <property name="text">
                <string>2316</string>
               </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
-              <property name="flags">
-               <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
-              </property>
              </item>
              <item row="0" column="2">
               <property name="text">
                <string/>
               </property>
               <property name="checkState">
-               <enum>Checked</enum>
+               <enum>Unchecked</enum>
               </property>
              </item>
              <item row="0" column="3">
               <property name="text">
-               <string>3</string>
+               <string/>
               </property>
               <property name="checkState">
-               <enum>Checked</enum>
+               <enum>Unchecked</enum>
               </property>
              </item>
              <item row="1" column="0">
@@ -2318,9 +1940,6 @@ Residual Deviance: 8416 	AIC: 8426
              <item row="1" column="1">
               <property name="text">
                <string>35245</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
               </property>
              </item>
              <item row="1" column="2">
@@ -2348,9 +1967,6 @@ Residual Deviance: 8416 	AIC: 8426
               <property name="text">
                <string>11306</string>
               </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
              </item>
              <item row="2" column="2">
               <property name="text">
@@ -2376,9 +1992,6 @@ Residual Deviance: 8416 	AIC: 8426
              <item row="3" column="1">
               <property name="text">
                <string>1762</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
               </property>
              </item>
              <item row="3" column="2">
@@ -2406,9 +2019,6 @@ Residual Deviance: 8416 	AIC: 8426
               <property name="text">
                <string>5</string>
               </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
              </item>
              <item row="4" column="2">
               <property name="text">
@@ -2435,9 +2045,6 @@ Residual Deviance: 8416 	AIC: 8426
               <property name="text">
                <string>71</string>
               </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
-              </property>
              </item>
              <item row="5" column="2">
               <property name="text">
@@ -2455,16 +2062,94 @@ Residual Deviance: 8416 	AIC: 8426
                <enum>Unchecked</enum>
               </property>
              </item>
+             <item row="6" column="0">
+              <property name="text">
+               <string>PL</string>
+              </property>
+             </item>
+             <item row="6" column="1">
+              <property name="text">
+               <string>56</string>
+              </property>
+             </item>
+             <item row="6" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="6" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="7" column="0">
+              <property name="text">
+               <string>SL</string>
+              </property>
+             </item>
+             <item row="7" column="1">
+              <property name="text">
+               <string>23</string>
+              </property>
+             </item>
+             <item row="7" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="7" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="8" column="0">
+              <property name="text">
+               <string>WB</string>
+              </property>
+             </item>
+             <item row="8" column="1">
+              <property name="text">
+               <string>90</string>
+              </property>
+             </item>
+             <item row="8" column="2">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
+             <item row="8" column="3">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
          </widget>
-         <widget class="QPushButton" name="pushButton_8">
+         <widget class="QPushButton" name="pbExecuteAllocation">
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>230</y>
-            <width>902</width>
+            <y>560</y>
+            <width>881</width>
             <height>27</height>
            </rect>
           </property>
@@ -2632,8 +2317,8 @@ Residual Deviance: 8416 	AIC: 8426
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>794</width>
-     <height>25</height>
+     <width>921</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
